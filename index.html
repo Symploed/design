@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/normalaize.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+ 	var obj = $(this);
+ 	$(obj).append("<div class='nav'></div>");
+ 	$(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
+
+});
+  $(obj).find("span").eq(1).addClass("on"); // делаем активным первый элемент меню
+});
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
+
+});
+
+
+</script>
+
+</head>
+<body>
+	<div class="top_head">
+		<div class="container">
+			<div class="top">
+
+
+				<div class="logo">
+					<img src="css/img/logo.png">
+
+					<div class="menu">
+						<a href="#">home</a>
+						<a href="#">about</a>
+						<a href="#">work</a>
+						<a href="#">process</a>
+						<a href="#">services</a>
+						<a href="#">testimonials</a>
+						<a href="#">contact</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="top_disc">
+				<div class="top_title">
+					We Design and Develop
+				</div>
+				<div class="top_text">
+					We are a new design studio based in USA. We have over 
+					20 years of combined experience, and know a thing or two 
+					about designing websites and mobile apps.
+				</div>
+				<div class="top_btn"><a href="#">CONTACT US</a>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="about">
+		<div class="container">
+			<div class="about_title">
+				About Us
+
+			</div>
+			<div class="about_text">Divide have don't man wherein air fourth. Own itself make have night won't make. 
+				A you under Seed appear which good give. Own give air without fowl moveth dry first 
+				heaven fruit, dominion she'd won't very all.
+
+
+			</div>
+			<div class="about_sign"><img src="css/img/sign.png">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="skill">
+		<div class="skill_top">
+		</div>
+		<div class="container">
+
+			<div class="right_side"></div>
+			<div class="Left_side">
+
+				<div class="left_title">Professional Skills
+
+				</div>
+				<div class="left_t1">
+					UI/UX Design    75% 
+				</div>
+				<div class="left_t2">
+					Web Development 90%
+
+				</div>
+				<div class="left_t3">
+					MARKETING 65%
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div class="work">
+		<div class="container">
+			<div class="work_space">
+				<div class="work_content">
+					<div class="work1_icon">
+
+					</div>
+					<div class="work_title">11
+
+					</div>
+					<div class="work_text">Text text
+
+					</div>
+				</div>
+				<div class="work_content">
+					<div class="work2_icon">
+
+					</div>
+					<div class="work_title">22
+
+					</div>
+					<div class="work_text">Text text
+
+					</div>
+
+				</div>
+				<div class="work_content">
+					<div class="work3_icon">
+
+					</div>
+					<div class="work_title">33
+
+					</div>
+					<div class="work_text">Text text
+
+					</div>
+
+				</div>
+				<div class="work_content">
+					<div class="work4_icon">
+
+					</div>
+					<div class="work_title">44
+
+					</div>
+					<div class="work_text">Text text
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box_top">
+			<div class="item1"></div>
+			<div class="item2"></div>
+			<div class="item3"></div>
+			<div class="item4"></div>
+
+		</div>
+		<div class="box_bot">
+			<div class="item_b1"></div>
+			<div class="item_b2"></div>
+			<div class="item_b3"></div>
+			<div class="item_b4"></div>
+		</div>	
+	</div>
+	<div class="more_link">
+
+		<div class="more_w_btn">
+			<a class="more_btn-link" href="#">LOAD MORE WORK </a>
+
+		</div>
+	</div>
+
+	<div class="our_work">
+		<div class="container">
+			<div class="our_work-title">
+				Our Work Process
+
+			</div>
+			<div class="our_work-text">	Was years it seasons was there form he in in them together over that, 
+				third sixth gathered female creeping bearing behold years.
+			</div>
+			<div class="our_work-vid"><iframe width="1168" height="570" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			</div>
+		</div>
+	</div>
+	<div class="we_do">
+		<div class="container">
+			<div class="we_do-top">
+				<div class="we_do-w">
+					
+					<div class="we_do-w1">
+						<div class="we_do-icon"></div>
+						<div class="we_do-title1">UI/UX DESIGN</div>
+						<div class="we_do-text1">Be set fourth land god darkness 
+						make it wherein own</div>
+					</div>
+					<div class="we_do-w2">
+						<div class="we_do-icon"></div>
+						<div class="we_do-title2">WEB DEVELOPMENT</div>
+						<div class="we_do-text2">A she'd them bring void moving 
+						third she'd kind fill</div>
+					</div>
+					<div class="we_do-w3">
+						<div class="we_do-icon"></div>
+						<div class="we_do-title3">APP/MOBILE</div>
+						<div class="we_do-text3">Dominion man second spirit he,
+						earth they're creeping</div>
+					</div>
+					<div class="we_do-w4">
+						<div class="we_do-icon"></div>
+						<div class="we_do-title4">GAME DESIGN</div>
+						<div class="we_do-text4">Morning his saying moveth it 
+						multiply appear life be</div>
+					</div>
+
+
+
+
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="we_dob">
+		<div class="container">
+			<div class="we_do-bot">
+				<div class="we_dob-w">
+					
+					<div class="we_dob-w1">
+						<div class="we_dob-icon"></div>
+						<div class="we_dob-title1">SEO/MARKETING</div>
+						<div class="we_dob-text1">Be set fourth land god darkness 
+						make it wherein own</div>
+					</div>
+					<div class="we_dob-w2">
+						<div class="we_dob-icon"></div>
+						<div class="we_dob-title2">PHOTOGRAPHY</div>
+						<div class="we_dob-text2">A she'd them bring void moving 
+						third she'd kind fill</div>
+					</div>
+					<div class="we_dob-w3">
+						<div class="we_dob-icon"></div>
+						<div class="we_dob-title3">GRAPHIC DESIGN</div>
+						<div class="we_dob-text3">Dominion man second spirit he,
+						earth they're creeping</div>
+					</div>
+					<div class="we_dob-w4">
+						<div class="we_dob-icon"></div>
+						<div class="we_dob-title4">ILUSTRATIONS</div>
+						<div class="we_dob-text4">Morning his saying moveth it 
+						multiply appear life be</div>
+					</div>
+
+
+
+
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="slider_all">
+		<div class="container">
+			<div class="slider">
+				<ul>
+
+					
+					<li><img src="#" alt=""><div class="sl_title">“ 2Outstanding job and exceeded all expectations. It was a pleasure 
+						to work with them on a sizable first project and am looking 
+					forward to start the next one asap.”</div><div class="sl_aut">Michael Hopkins</div></li>
+					<li><img src="#" alt=""><div class="sl_title">“ 3Outstanding job and exceeded all expectations. It was a pleasure 
+						to work with them on a sizable first project and am looking 
+					forward to start the next one asap.”</div><div class="sl_aut">Michael Hopkins</div></li>
+					<li><img src="#" alt=""><div class="sl_title">“ Outstanding job and exceeded all expectations. It was a plea4sure 
+						to work with them on a sizable first project and am looking 
+					forward to start the next one asap.”</div><div class="sl_aut">Michael Hopkins</div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="brand">
+		<div class="container">
+			<div class="brand_logo">
+				<img class="logos" src="css/img/l1.png" alt="">
+				<img class="logos" src="css/img/l2.png" alt="">
+				<img class="logos" src="css/img/l3.png" alt="">
+				<img class="logos" src="css/img/l4.png" alt="">
+				<img class="logos" src="css/img/l5.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="request">
+		<div class="container_req">
+			<div class="req_menu">
+				<div class="req_title"> Need a Project?
+				
+				</div>
+					<div class="req_text">Let us know what you're looking for in an agency. We'll take a look and see 
+if this could be the start of something beautiful.
+				
+			</div>
+			<input type="text" placeholder="   Your Name" class="req_name">
+			<input type="text" placeholder="   Your Email" class="req_mail">
+			<input type="text"  placeholder="   Your Title" class="req_title_b">
+			<input type="text"  placeholder="   Your Comment"class="req_comment">
+			<div class="req_btn"> <a class="req_link"href="#">SEND MESSAGE</a> </div>
+		</div>
+		</div>
+	</div>
+</body>
+
+
+
+
+
+
+
+<div class="footer">
+	<div class="container">
+		<div class="footer_inner">
+		<div class="by">
+			<div class="by_title">Verstka by Sanya
+				
+			</div>
+			<div class="by_cr">
+			Sanya bil zdes i eto top4ik 2020 </br>
+			coronavirus edition
+				
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="phone">+380 191919 
+				
+			</div>
+			<div class="email">huynya@gmail.com
+				
+			</div>
+
+		</div>
+		<ui>
+			<li class="links"><a href="#">11</a></li>
+			<li class="links"><a href="#">11</a></li>
+			<li class="links"><a href="#">11</a></li>
+			<li class="links"><a href="#">11</a></li>
+		</ui>
+		<ui>
+				<li class="links"><a href="#">11</a></li>
+				<li class="links"><a href="#">11</a></li>
+				<li class="links"><a href="#">11</a></li>
+			<li class="links"><a href="#">11</a></li>
+		</ui>
+		<ui>
+				<li class="links"><a href="#">11</a></li>
+				<li class="links"><a href="#">11</a></li>
+				<li class="links"><a href="#">11</a></li>
+				<li class="links"><a href="#">11</a></li>
+		</ui>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+</html>
